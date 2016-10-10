@@ -129,11 +129,17 @@ function writeMyStory(){
 }
 
 function previousPage(){
+  if(currentPage==0){
+    return false;
+  }
   currentPage--;
   changePage();
 }
 
 function nextPage(){
+  if (currentPage==(finalPages.length-1)){
+    return false;
+  }
   currentPage++;
   changePage();
 }
